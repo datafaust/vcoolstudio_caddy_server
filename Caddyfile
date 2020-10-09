@@ -1,0 +1,164 @@
+ metis-data.site www.metis-data.site {
+    gzip
+    realip cloudflare
+    tls faustolopez110@gmail.com
+    tls {
+        dns cloudflare
+    }
+    header / {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000;"
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks
+        X-XSS-Protection "1; mode=block"
+        # Disallow the site to be rendered within a frame (clickjacking protection)
+        X-Frame-Options "DENY"
+    }
+    redir https://faustolopez.com
+}
+
+platesql.metis-data.site {
+    gzip
+    realip cloudflare
+    tls faustolopez110@gmail.com
+    tls {
+        dns cloudflare
+    }
+    header / {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000;"
+        # Prevents embedding of instance within an iframe
+        X-Frame-Options: SAMEORIGIN
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks
+        X-XSS-Protection "1; mode=block"
+    }
+    proxy / sqlnodeplate:3001 {
+        websocket
+        transparent
+    }
+}
+
+plateimage.metis-data.site {
+    gzip
+    realip cloudflare
+    tls faustolopez110@gmail.com
+    tls {
+        dns cloudflare
+    }
+    header / {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000;"
+        # Prevents embedding of instance within an iframe
+        X-Frame-Options: SAMEORIGIN
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks
+        X-XSS-Protection "1; mode=block"
+    }
+    proxy / openalpr:5000 {
+        websocket
+        transparent
+    }
+}
+
+ta.metis-data.site {
+    gzip
+    realip cloudflare
+    tls faustolopez110@gmail.com
+    tls {
+        dns cloudflare
+    }
+    header / {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000;"
+        # Prevents embedding of instance within an iframe
+        X-Frame-Options: SAMEORIGIN
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks
+        X-XSS-Protection "1; mode=block"
+    }
+    proxy / testapi:4000 {
+        websocket
+        transparent
+    }
+}
+
+geohut.metis-data.site {
+    gzip
+    realip cloudflare
+    tls faustolopez110@gmail.com
+    tls {
+        dns cloudflare
+    }
+    header / {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000;"
+        # Prevents embedding of instance within an iframe
+        X-Frame-Options: SAMEORIGIN
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks
+        X-XSS-Protection "1; mode=block"
+    }
+    proxy / geohutnode:3002 {
+        websocket
+        transparent
+    }
+}
+
+geohutsecure.metis-data.site {
+    gzip
+    realip cloudflare
+    tls faustolopez110@gmail.com
+    tls {
+        dns cloudflare
+    }
+    header / {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000;"
+        # Prevents embedding of instance within an iframe
+        X-Frame-Options: SAMEORIGIN
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks
+        X-XSS-Protection "1; mode=block"
+    }
+    proxy / geohutnodesecure:3005 {
+        websocket
+        transparent
+    }
+}
+
+volleybuddy.metis-data.site {
+    gzip
+    realip cloudflare
+    tls faustolopez110@gmail.com
+    tls {
+        dns cloudflare
+    }
+    header / {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000;"
+        # Prevents embedding of instance within an iframe
+        X-Frame-Options: SAMEORIGIN
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks
+        X-XSS-Protection "1; mode=block"
+    }
+    proxy / volleybuddy_api:3007 {
+        websocket
+        transparent
+    }
+}
+
+test.metis-data.site {
+    gzip
+    realip cloudflare
+    tls faustolopez110@gmail.com
+    tls {
+        dns cloudflare
+    }
+    header / {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000;"
+        # Prevents embedding of instance within an iframe
+        X-Frame-Options: SAMEORIGIN
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks
+        X-XSS-Protection "1; mode=block"
+    }
+    proxy / stringsite:3006 {
+        websocket
+        transparent
+    }
+}

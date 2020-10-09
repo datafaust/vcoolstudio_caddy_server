@@ -1,2 +1,1 @@
-# vcoolstudio_caddy_server
-vcoolstudio caddy server
+# caddy-server
